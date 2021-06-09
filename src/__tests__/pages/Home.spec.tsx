@@ -129,7 +129,7 @@ describe('Home page', () => {
     expect(await screen.findByText('The best friend')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Danilo' })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: 'Danilo' })).toBeInTheDocument();
-  });
+  }); // OK
 
   it('should be able to view an image', async () => {
     apiMock.onGet('/api/images').reply(200, {
@@ -159,7 +159,7 @@ describe('Home page', () => {
       'href',
       'LOAD_SUCCESS_SRC'
     );
-  });
+  }); // OK
 
   it('should be able to load more images', async () => {
     apiMock.onGet('/api/images').replyOnce(200, {
